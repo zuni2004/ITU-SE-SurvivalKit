@@ -1,0 +1,48 @@
+Starbuzz Coffee
+
+Overview
+Starbuzz Coffee is a simple Java application that demonstrates the Decorator Design Pattern. It allows users to create different types of beverages and add various condiments, calculating the total cost for each order. The application showcases object-oriented programming principles, including abstraction and inheritance.
+
+Features
+Create different types of beverages (e.g., Dark Roast, Espresso, Decaf, House Blend).
+Add condiments (e.g., Milk, Mocha, Soy, Whip) to beverages.
+Calculate and display the total cost of the beverage with added condiments.
+Display a detailed description of the ordered beverage.
+
+Getting Started
+
+Prerequisites
+Java Development Kit (JDK) 8 or higher
+A terminal or command prompt
+A text editor or IDE for Java (e.g., Eclipse, IntelliJ IDEA, or Visual Studio Code)
+
+Installation
+1. Clone or download the repository to your local machine.
+2. Open a terminal and navigate to the directory where the files are located.
+
+   cd path/to/your/directory
+
+3. Compile the Java files:
+
+   javac *.java
+
+4. Run the main class:
+
+   java StarbuzzCoffee
+
+Code Structure
+The project consists of the following classes:
+
+Beverage: An abstract class representing the base beverage.
+CondimentDecorator: An abstract class extending Beverage, representing condiments.
+DarkRoast, Decaf, Espresso, HouseBlend: Concrete classes that extend Beverage, each representing a specific type of coffee.
+Milk, Mocha, Soy, Whip: Concrete classes that extend CondimentDecorator, representing different condiments.
+StarbuzzCoffee: The main class containing the main method to run the application.
+
+Usage
+Upon running the application, it will create several beverage orders and display the descriptions along with their total costs. The output will look similar to this:
+
+Dark Roast COffee, Milk, Mocha $1.40
+House Blend Coffee, Soy, Whip $0.90
+Espresso, Whip $2.20
+Decaf COffee, Mocha $1.70

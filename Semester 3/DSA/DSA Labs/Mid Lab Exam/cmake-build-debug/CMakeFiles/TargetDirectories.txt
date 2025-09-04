@@ -1,0 +1,3 @@
+C:/Users/Zunaira/OneDrive/Desktop/Your Roll Num/cmake-build-debug/CMakeFiles/Your_Roll_Num.dir
+C:/Users/Zunaira/OneDrive/Desktop/Your Roll Num/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Zunaira/OneDrive/Desktop/Your Roll Num/cmake-build-debug/CMakeFiles/rebuild_cache.dir

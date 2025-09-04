@@ -1,0 +1,38 @@
+Weather Monitoring System
+
+
+Overview
+This project implements the Observer Pattern to create a weather monitoring system. It consists of the following components:
+
+Subject (WeatherData): Maintains weather data and notifies observers of changes.
+
+Observers (CurrentConditionsDisplay, StatisticsDisplay, ForecastDisplay): Displays different types of weather-related data when updated.
+
+DisplayElement Interface: Defines a method for displaying data.
+
+Execution Steps
+
+
+1. Setup and Compilation
+Compiled it using Termminal. Compile the Java files using:
+javac *.java
+
+2. Run the Application
+Execute the main class that initializes the WeatherData and display components:
+java WeatherStation
+
+3. Expected Output
+Once the program runs, it will display weather updates for Current Conditions, Statistics, and Forecast based on changing data.
+
+4. Modify Weather Data
+To simulate weather changes, modify setMeasurements(float temperature, float humidity, float pressure) in WeatherData and observe how displays update.
+
+
+Files Included
+Subject.java: Interface defining the Subject.
+Observer.java: Interface defining the Observer.
+WeatherData.java: Implements the Subject.
+CurrentConditionsDisplay.java: Displays current weather conditions.
+StatisticsDisplay.java: Displays min, max, and average temperature.
+ForecastDisplay.java: Displays weather forecast.
+WeatherStation.java: Initializes and runs the application.

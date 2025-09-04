@@ -1,0 +1,87 @@
+# Pizza Ordering System (Factory Method Pattern)
+
+## Overview
+This project demonstrates the **Factory Method Design Pattern** using a pizza ordering system. The system includes different types of pizzas available in New York and Chicago pizza stores. Each store follows a standardized pizza preparation process while providing region-specific variations.
+
+## Prerequisites
+Ensure you have the following setup before running the program:
+- Java Development Kit (JDK) installed (Java 8 or later)
+- An IDE (such as IntelliJ IDEA, Eclipse, or VS Code) or a terminal for running Java programs
+
+## Project Structure
+```
+PizzaOrderingSystem/
+│── Pizza.java                # Abstract base class for all pizzas
+│── PizzaStore.java           # Abstract factory class for pizza stores
+│── NYPizzaStore.java         # Concrete implementation for NY Pizza Store
+│── ChicagoPizzaStore.java    # Concrete implementation for Chicago Pizza Store
+│── NYStyleCheesePizza.java   # NY-style cheese pizza class
+│── NYStyleClamPizza.java     # NY-style clam pizza class
+│── NYStylePepperoniPizza.java # NY-style pepperoni pizza class
+│── NYStyleVeggiePizza.java   # NY-style veggie pizza class
+│── ChicagoStyleCheesePizza.java  # Chicago-style cheese pizza class
+│── ChicagoStyleClamPizza.java    # Chicago-style clam pizza class
+│── ChicagoStylePepperoniPizza.java # Chicago-style pepperoni pizza class
+│── ChicagoStyleVeggiePizza.java  # Chicago-style veggie pizza class
+│── PizzaTestDrive.java        # Main class to test the pizza ordering system
+```
+
+## Execution Steps
+
+1. **Compile the Java Files**  
+   Open a terminal or command prompt in the project directory and compile all Java files using:
+   ```sh
+   javac *.java
+   ```
+
+2. **Run the Program**  
+   After compilation, execute the main class `PizzaTestDrive`:
+   ```sh
+   java PizzaTestDrive
+   ```
+
+3. **Expected Output**  
+   The program will simulate ordering pizzas from New York and Chicago stores. Example output:
+   ```
+   1. NY Style Sauce and Cheese Pizza is being prepared
+       Tossing dough...
+       Adding sauce...
+       Adding toppings:
+       Grated Reggiano Cheese
+   2. Pizza is being baked
+   3. Pizza is being cut
+   4. Pizza is being boxed
+   Ethan ordered a NY Style Sauce and Cheese Pizza
+   
+   1. Chicago Style Deep Dish Cheese Pizza is being prepared
+       Tossing dough...
+       Adding sauce...
+       Adding toppings:
+       Shredded Mozzarella Cheese
+   2. Pizza is being baked
+   3. Pizza is being cut
+   4. Pizza is being boxed
+   Joel ordered a Chicago Style Deep Dish Cheese Pizza
+   ```
+
+## Explanation of the Factory Method Pattern
+- **PizzaStore (Abstract Factory Class)**: Defines the `orderPizza()` method and an abstract `createPizza()` method, which is implemented in subclasses.
+- **NYPizzaStore & ChicagoPizzaStore (Concrete Factories)**: Implements `createPizza()` to instantiate region-specific pizza variants.
+- **Pizza (Abstract Product Class)**: Defines common methods like `prepare()`, `bake()`, `cut()`, and `box()`.
+- **NYStyleCheesePizza, ChicagoStyleCheesePizza, etc. (Concrete Products)**: Specific pizza implementations with distinct ingredients and styles.
+
+## Key Features
+- Uses **Factory Method Pattern** for extensibility.
+- Supports easy addition of new pizza types or store locations.
+- Demonstrates **Object-Oriented Design Principles**, such as encapsulation and polymorphism.
+
+## Customization
+To add a new pizza type, follow these steps:
+1. Create a new class extending `Pizza`, e.g., `NYStyleBBQPizza.java`.
+2. Define its unique `name`, `dough`, `sauce`, and `toppings`.
+3. Modify `NYPizzaStore` or `ChicagoPizzaStore` to include the new pizza type in the `createPizza()` method.
+4. Run the program to see the updated menu in action!
+
+## Conclusion
+This project provides a simple yet effective demonstration of the Factory Method Pattern in Java. By separating the creation logic from the client code, it ensures better maintainability and flexibility when adding new pizza types or stores.
+
