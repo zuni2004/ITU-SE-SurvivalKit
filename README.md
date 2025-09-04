@@ -68,4 +68,5 @@ Open a pull request or email me! Let’s make this repo the ultimate **SE Surviv
 
 Good luck, juniors! 💪  
 *May your code be bug-free and your exams merciful.*  
-
+This is a google drive link for the resources too, if you don't know how to use github. 
+https://drive.google.com/drive/folders/1wY5_4-m2bFr_2rNT6vGjE-tSuhoPMYf5?usp=sharing
