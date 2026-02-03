@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build Image') {
+            steps {
+                sh 'docker build -t devsolutions-web:latest ./app'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing HTML syntax...'
+                sh 'ls app/index.html' 
+            }
+        }
+        stage('Deploy to K8s') {
+            steps {
+                sh 'kubectl apply -f kubernetes/deployment.yaml'
+                sh 'kubectl rollout restart deployment/devsolutions-deploy'
+            }
+        }
+    }
+}

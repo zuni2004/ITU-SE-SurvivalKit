@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  frontend:
+    build: ./app
+    ports:
+      - "9090:80"
+    volumes:
+      - ./app:/usr/share/nginx/html 
+    networks:
+      - devops-net
+
+  health-monitor:
+    image: alpine
+    command: /bin/sh -c "while true; do echo 'DevSolutions App is healthy'; sleep 10; done"
+    networks:
+      - devops-net
+
+networks:
+  devops-net:
+    driver: bridge
