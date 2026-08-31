@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Lab 12 - BSSE23058</title>
+</head>
+<body>
+    <h2>Enter Feature Values</h2>
+    <form method="POST">
+        <input type="number" step="any" name="f1" placeholder="Age" required><br><br>
+        <input type="number" step="any" name="f2" placeholder="Income" required><br><br>
+        <input type="number" step="any" name="f3" placeholder="Hour" required><br><br>
+        <input type="number" step="any" name="f4" placeholder="Leak Feature" required><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Result: {{ "Positive (1)" if prediction == 1 else "Negative (0)" }}</h3>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,4 @@
+[2026-05-24 14:51:44] Initial scan complete. Baseline hashes saved.
+[2026-05-24 14:52:58] MODIFIED: ./test_folder\random_things_9.txt
+[2026-05-24 14:54:16] DELETED: ./test_folder\random_things_8.txt
+[2026-05-24 14:55:20] ADDED: ./test_folder\random_things_21.txt
